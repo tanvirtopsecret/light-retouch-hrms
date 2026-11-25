@@ -197,3 +197,6 @@ The application has not been deployed to the office PC or publicly hosted by thi
 ## Your previous data
 
 This personalized package includes the HRMS database, payroll database, existing user accounts, employee record, settings, and original company logo from the V3 ZIP you uploaded. Use your existing V3 usernames and passwords. Read `UPDATE_GUIDE.md` before starting.
+=======
+# light-retouch-hrms
+Light Retouch Human Resource Management System
