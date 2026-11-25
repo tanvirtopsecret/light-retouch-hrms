@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+instance/*.db
+instance/*.db-shm
+instance/*.db-wal
+backups/*
+!backups/.gitkeep
+uploads/*
+!uploads/.gitkeep

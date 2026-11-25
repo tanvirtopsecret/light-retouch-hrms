@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#023951">
+  <title>Light Retouch Management System</title>
+  <link rel="stylesheet" href="/static/app.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <div id="loginView" class="login-view hidden">
+    <div class="login-art">
+      <div class="brand-mark">LR</div>
+      <div class="login-art-copy">
+        <span class="eyebrow">LIGHT RETOUCH MANAGEMENT</span>
+        <h1>One workspace.<br>Every people process.</h1>
+        <p>A private HR management system for employee records, attendance, leave, payroll and the complete employee lifecycle.</p>
+      </div>
+      <div class="login-art-foot">LIGHT RETOUCH <span>•</span> MANAGEMENT SYSTEM</div>
+    </div>
+    <div class="login-panel">
+      <div class="login-panel-inner">
+        <div class="mobile-brand"><div class="brand-mark small">LR</div><span>Light Retouch Management System</span></div>
+        <span class="eyebrow muted">WELCOME BACK</span>
+        <h2 id="loginSystemName">Light Retouch Management System</h2>
+        <p class="muted intro">Sign in using the account provided by your system administrator.</p>
+        <form id="loginForm" class="stack-form">
+          <label>Login email<input name="username" type="email" autocomplete="username" placeholder="you@company.com" required></label>
+          <label>Password<div class="password-field"><input name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required><button type="button" class="password-toggle" aria-label="Show password">Show</button></div></label>
+          <div id="loginError" class="form-error hidden"></div>
+          <button class="btn btn-primary full" type="submit">Sign in <span>→</span></button>
+        </form>
+        <div class="login-security"><span class="secure-dot"></span> Private company system · Authorized access only</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="appView" class="app-shell hidden">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-mark">LR</div>
+        <div><strong>Light Retouch Management System</strong><span>MANAGEMENT SYSTEM</span></div>
+        <button class="mobile-close" id="closeSidebar" aria-label="Close menu">×</button>
+      </div>
+      <div class="workspace-label">WORKSPACE</div>
+      <nav id="mainNav" class="main-nav"></nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-help"><span class="help-icon">?</span><div><strong>Need assistance?</strong><small>Contact your HR administrator</small></div></div>
+        <div class="sidebar-user"><div class="avatar" id="sidebarAvatar">LR</div><div class="sidebar-user-info"><strong id="sidebarName">User</strong><small id="sidebarRole">Role</small></div><button id="changePasswordBtn" class="icon-btn logout-btn" title="Change password" aria-label="Change password">⚿</button><button id="logoutBtn" class="icon-btn logout-btn" title="Sign out" aria-label="Sign out">↗</button></div>
+      </div>
+    </aside>
+    <div id="sidebarScrim" class="sidebar-scrim"></div>
+    <main class="main-area">
+      <header class="topbar">
+        <div class="topbar-left"><button id="menuToggle" class="icon-btn menu-toggle" aria-label="Open menu">☰</button><div><div class="breadcrumb" id="breadcrumb">Overview</div><div class="topbar-context" id="topbarContext">Your people operations at a glance</div></div></div>
+        <div class="topbar-right"><div class="today-chip"><span class="calendar-dot">◷</span><span id="todayLabel">Today</span></div><div class="top-avatar" id="topAvatar">LR</div></div>
+      </header>
+      <section class="page-wrap">
+        <div id="pageContent" class="page-content"></div>
+      </section>
+      <footer class="app-footer"><span>Light Retouch · Internal HRMS</span><span>All times Asia/Dhaka (UTC+6)</span></footer>
+    </main>
+  </div>
+
+  <div id="modalRoot"></div>
+  <div id="toastRoot" class="toast-root" aria-live="polite"></div>
+</body>
+</html>
